@@ -1,6 +1,6 @@
-package com.example.demo.controller
+package com.example.demo
 
-import com.example.demo.service.MessageService
+import com.example.demo.MessageService
 import org.springframework.http.ResponseEntity
 import org.springframework.web.bind.annotation.PostMapping
 import org.springframework.web.bind.annotation.RequestMapping

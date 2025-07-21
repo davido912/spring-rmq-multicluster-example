@@ -1,4 +1,4 @@
-package com.example.demo.listener
+package com.example.demo
 
 import org.springframework.amqp.rabbit.annotation.RabbitListener
 import org.springframework.stereotype.Component
