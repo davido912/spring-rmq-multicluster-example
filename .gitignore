@@ -41,11 +41,6 @@ release.properties
 .DS_Store
 Thumbs.db
 
-# Spring Boot specific
-application.properties
-application.yml
-application-dev.yml
-application-prod.yml
 
 # Test reports
 test-output/
