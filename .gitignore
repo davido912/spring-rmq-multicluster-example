@@ -1,0 +1,56 @@
+### Kotlin ###
+*.class
+*.jar
+*.war
+*.ear
+
+# Compiled Kotlin files
+*.kotlin_metadata
+*.kotlin_module
+
+# IntelliJ IDEA
+.idea/
+*.iml
+*.ipr
+*.iws
+out/
+# VS Code
+.vscode/
+
+# Build output
+/build/
+target/
+
+# Gradle
+.gradle/
+build/
+!gradle/wrapper/gradle-wrapper.jar
+
+# Maven
+/logs/
+*.log
+!.mvn/wrapper/maven-wrapper.jar
+.mvn/
+pom.xml.tag
+pom.xml.releaseBackup
+pom.xml.versionsBackup
+pom.xml.next
+release.properties
+
+# OS-specific
+.DS_Store
+Thumbs.db
+
+# Spring Boot specific
+application.properties
+application.yml
+application-dev.yml
+application-prod.yml
+
+# Test reports
+test-output/
+test-results/
+
+# Environment files
+.env
+*.env

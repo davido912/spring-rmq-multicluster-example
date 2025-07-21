@@ -1,0 +1,37 @@
+version: '3.8'
+
+services:
+  # Legacy RabbitMQ
+  legacy-cluster:
+    image: rabbitmq:3.12-management
+    hostname: legacy-cluster
+    container_name: legacy-cluster
+    environment:
+      - RABBITMQ_DEFAULT_USER=admin
+      - RABBITMQ_DEFAULT_PASS=admin
+      - RABBITMQ_LOAD_DEFINITIONS=true
+      - RABBITMQ_DEFINITIONS_FILE=/etc/rabbitmq/definitions.json
+    ports:
+      - "5672:5672"   # AMQP protocol
+      - "15672:15672" # Management UI
+    volumes:
+      - ./rabbitmq/legacy-definitions.json:/etc/rabbitmq/definitions.json:ro
+      - ./rabbitmq/rabbitmq.conf:/etc/rabbitmq/rabbitmq.conf:ro
+
+  # Shared RabbitMQ
+  shared-cluster:
+    image: rabbitmq:3.12-management
+    hostname: shared-cluster
+    container_name: shared-cluster
+    environment:
+      - RABBITMQ_DEFAULT_USER=admin
+      - RABBITMQ_DEFAULT_PASS=admin
+      - RABBITMQ_LOAD_DEFINITIONS=true
+      - RABBITMQ_DEFINITIONS_FILE=/etc/rabbitmq/definitions.json
+    ports:
+      - "5673:5672"   # AMQP protocol
+      - "15673:15672" # Management UI
+    volumes:
+      - ./rabbitmq/shared-definitions.json:/etc/rabbitmq/definitions.json:ro
+      - ./rabbitmq/rabbitmq.conf:/etc/rabbitmq/rabbitmq.conf:ro
+  
