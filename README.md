@@ -1,0 +1,1 @@
+# spring-rmq-multicluster-example
